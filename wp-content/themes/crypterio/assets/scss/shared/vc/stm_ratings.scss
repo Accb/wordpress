@@ -1,0 +1,40 @@
+.stm_rating_text {
+    text-align: center;
+    &__inner {
+        position: relative;
+        display: inline-block;
+    }
+    &__mark {
+        color: #9191b1;
+        font-size: 42px;
+        strong {
+            color: #fff;
+            font-size: 60px;
+        }
+    }
+    &__title {
+        color: #9191b1;
+    }
+    &__image {
+        position: absolute;
+        left: -60px;
+        top: 50%;
+        width: 39px;
+        margin-top: -30px;
+        &_last {
+            left: auto;
+            right: -60px;
+            transform: scale(1, -1) rotate(180deg);
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .stm_rating_text__image {
+        left: -50px;
+        &_last {
+            right: -50px;
+            left: auto;
+        }
+    }
+}
